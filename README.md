@@ -1,4 +1,4 @@
-# nunjucks-filters
+# nunjucks-blowup-filters
 
 
 Blow Up your Nunjuck With a Horse Steroids Injection!
@@ -7,12 +7,12 @@ Blow Up your Nunjuck With a Horse Steroids Injection!
 
 
 ```console
-$ npm i -s nunjucks-filters
+$ npm i -s nunjucks-blowup-filters
 ```
 
 ```ts
 import { Environment } from "nunjucks";
-import { bind } from "nunjucks-filters";
+import { bind } from "nunjucks-blowup-filters";
 
 export const _env = new Environment(null, {
   tags: {
@@ -57,7 +57,7 @@ console.log(rendered);
 
 ## Help us
 
-See [CONTRIBUTING.md](https://github.com/alelltech/nunjucks-filters/blob/main/CONTRIBUTING.md)
+See [CONTRIBUTING.md](https://github.com/alelltech/nunjucks-blowup-filters/blob/main/CONTRIBUTING.md)
 
 *If you like our project help us to make more best solutions.*
 
