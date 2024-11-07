@@ -14,13 +14,13 @@ $ npm i -s nunjucks-blowup-filters
 import { Environment } from "nunjucks";
 import { bind } from "nunjucks-blowup-filters";
 
-export const _env = new Environment(null, {
-  tags: {
-    variableStart: '{{'
-  },
-})
-
-bind(_env);
+export const _env = bind(
+  new Environment(null, {
+    tags: {
+      variableStart: '{{'
+    },
+  })
+) as Environment;
 
 const rendered = _env.renderString('hello {{ foo | camelize }}\nbase 64: {{ foo | encode64 }}', {foo: 'bar'});
 
