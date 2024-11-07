@@ -1,7 +1,8 @@
-import * as assert from "assert";
+import 'mocha';
 // import { cascadeMatch } from "..";
 import { bind } from "../";
 import * as _ from 'underscore.string';
+import assert from 'assert';
 
 describe("Default Suite", () => {
   after(() => {

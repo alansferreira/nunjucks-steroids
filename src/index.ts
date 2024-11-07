@@ -1,12 +1,25 @@
 import * as _ from 'underscore.string';
+// import prettyms from 'pretty-ms';
+import parseDuration from 'parse-duration';
+import ms from 'ms';
 
-const aliasMap = {
+
+const aliasMap: Record<string, (str: string, ...args: any[]) => string> = {
   'pascalCase': _.classify,
-  'base64': (str: string) => Buffer.from(str).toString('base64'),
-  'encode64': (str: string) => Buffer.from(str).toString('base64'),
-  'decode64': (str: string) => Buffer.from(str, 'base64').toString('utf-8'),
-  'encodeHex': (str: string) => Buffer.from(str).toString('hex'),
-  'decodeHex': (str: string) => Buffer.from(str, 'hex').toString('utf-8'),
+  'encode64': (str) => Buffer.from(str).toString('base64'),
+  'decode64': (str) => Buffer.from(str, 'base64').toString('utf-8'),
+  'encodeHex': (str) => Buffer.from(str).toString('hex'),
+  'decodeHex': (str) => Buffer.from(str, 'hex').toString('utf-8'),
+  'humanMs': (str, long = false) => {
+    const n = Number(str);
+    if(isNaN(n)) return 'Error: input must be a number!';
+    return ms(n, {long});
+  },
+  'parseMs': (str, long = false) => {
+    const n = Number(str);
+    if(!isNaN(n)) return `Error: input must be humanized like '1s', '10d'`;
+    return ms(str).toString();
+  },
 }
 
 export function bind(env: {getFilter: (name: string)=> Function}){
