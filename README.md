@@ -36,13 +36,13 @@ All [underscore.string](https://www.npmjs.com/package/underscore.string) functio
 
 ### Custom
 ```
-{{ 'my name'      | pascalCase }}    // MyName
-{{ 'foo'          | encode64 }}      // Zm9vCg==
-{{ 'Zm9vCg=='     | decode64 }}      // foo
-{{ 'foo'          | encodeHex }}     // 6f660a6f
-{{ '6f660a6f'     | decodeHex }}     // foo
-{{ 36000          | humanMs }}       // 4s
-{{ '4s'           | parseMs }}       // 36000
+pascalCase: my name  => {{ 'my name'      | pascalCase }}  // MyName
+encode64:   foo      => {{ 'foo'          | encode64 }}    // Zm9v
+decode64:   Zm9v     => {{ 'Zm9v'         | decode64 }}    // foo
+encodeHex:  foo      => {{ 'foo'          | encodeHex }}   // 666f6f
+decodeHex:  666f6f   => {{ '666f6f'       | decodeHex }}   // foo
+duration:   36000    => {{ 36000          | duration }}    // 36s
+duration:   4s       => {{ '4s'           | duration }}    // 4000
 ```
 
 ## About US

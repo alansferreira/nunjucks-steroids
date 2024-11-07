@@ -10,16 +10,15 @@ const aliasMap: Record<string, (str: string, ...args: any[]) => string> = {
   'decode64': (str) => Buffer.from(str, 'base64').toString('utf-8'),
   'encodeHex': (str) => Buffer.from(str).toString('hex'),
   'decodeHex': (str) => Buffer.from(str, 'hex').toString('utf-8'),
-  'humanMs': (str, long = false) => {
+  'duration': (str, long = false) => {
     const n = Number(str);
-    if(isNaN(n)) return 'Error: input must be a number!';
-    return ms(n, {long});
+    if(!isNaN(n)) return ms(n);
+    if(isNaN(n)) return ms(str, {long}).toString();
   },
-  'parseMs': (str, long = false) => {
-    const n = Number(str);
-    if(!isNaN(n)) return `Error: input must be humanized like '1s', '10d'`;
-    return ms(str).toString();
-  },
+  'date': (str, format, ...args: any[])=>{
+
+    return '';
+  }
 }
 
 export function bind(env: {getFilter: (name: string)=> Function}){
