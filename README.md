@@ -45,6 +45,8 @@ decode64:   Zm9v       => {{ 'Zm9v'         | decode64 }}    // foo
 encodeHex:  foo        => {{ 'foo'          | encodeHex }}   // 666f6f
 decodeHex:  666f6f     => {{ '666f6f'       | decodeHex }}   // foo
 
+uuid: {% uuid %}
+
 # see https://github.com/vercel/ms?tab=readme-ov-file#examples
 duration:   36000      => {{ 36000          | duration }}    // 36s
 duration:   4 seconds  => {{ '4 seconds'    | duration(true) }}    // 4000

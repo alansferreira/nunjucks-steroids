@@ -4,6 +4,7 @@ import parseDuration from 'parse-duration';
 import * as ms from 'ms';
 import * as dayjs from 'dayjs';
 import * as customParseFormat from 'dayjs/plugin/customParseFormat';
+import { randomUUID } from 'crypto';
 
 dayjs.extend(customParseFormat);
 
@@ -30,7 +31,19 @@ const aliasMap: Record<string, (str: string, ...args: any[]) => string> = {
   }
 }
 
-export function bind(env: {getFilter: (name: string)=> Function}){
+function UuidExtension() {
+  this.tags = ['uuid'];
+  this.parse = function(parser, nodes, lexer) {
+      var tok = parser.nextToken();
+      var args = parser.parseSignature(null, true);
+      parser.advanceAfterBlockEnd(tok.value);
+      return new nodes.CallExtension(this, 'run', args, []);
+  };
+
+  this.run = randomUUID;
+}
+
+export default function bind(env: {getFilter: (name: string) => Function, addExtension(name: string, ext: any): any, }){
   const _getFilter = env.getFilter;
   env.getFilter = function (name: string) {
 
@@ -47,5 +60,8 @@ export function bind(env: {getFilter: (name: string)=> Function}){
     // use default filters
     return _getFilter.bind(env)(name);
   }
+
+  env.addExtension('uuid', new UuidExtension());
+
   return env;
 }
