@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.12](https://github.com/alansferreira/nunjucks-blowup-filters/compare/v1.0.11...v1.0.12) (2024-11-07)
+
+
+### Others
+
+* **release:** 1.0.11 ([687a1ee](https://github.com/alansferreira/nunjucks-blowup-filters/commit/687a1eecab56488027d6d25266696a64f5d071d5))
+
 ### [1.0.11](https://github.com/alansferreira/nunjucks-blowup-filters/compare/v1.0.10...v1.0.11) (2024-11-07)
 
 
