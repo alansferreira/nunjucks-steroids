@@ -1,6 +1,6 @@
 {
-  "name": "nunjucks-filters",
-  "version": "1.0.9",
+  "name": "nunjucks-blowup-filters",
+  "version": "1.0.10",
   "author": "Alan S. Ferreira",
   "description": "Nunjucks filters Horse Steroids Injection.",
   "license": "MIT",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alansferreira/nunjucks-filters.git"
+    "url": "https://github.com/alansferreira/nunjucks-blowup-filters.git"
   },
   "scripts": {
     "release": "standard-version -a --releaseCommitMessageFormat \"chore(release): {{currentTag}}\" ",
