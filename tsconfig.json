@@ -1,14 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES6",
     "outDir": "./dist",
     // "sourceRoot": "./src/",
     "module": "CommonJS",
     "declaration": true,
     // "sourceMap": true,
     "strictNullChecks": false,
-    "removeComments": true,
-    "esModuleInterop": true
+    "removeComments": true
   },
   "include": ["**/*.ts"],
   "exclude": ["**/tests", "**/node_modules"]

@@ -1,8 +1,8 @@
 import 'mocha';
-// import { cascadeMatch } from "..";
 import { bind } from "../";
+// import { bind } from '../../dist'
 import * as _ from 'underscore.string';
-import assert from 'assert';
+import * as assert from 'assert';
 
 describe("Default Suite", () => {
   after(() => {

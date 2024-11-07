@@ -1,7 +1,7 @@
 import * as _ from 'underscore.string';
 // import prettyms from 'pretty-ms';
 import parseDuration from 'parse-duration';
-import ms from 'ms';
+import * as ms from 'ms';
 
 
 const aliasMap: Record<string, (str: string, ...args: any[]) => string> = {
