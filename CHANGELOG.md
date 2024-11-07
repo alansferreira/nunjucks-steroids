@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.0.8 (2024-11-07)
+
+
+### Bug Fixes
+
+* readme ([c5b14db](https://github.com/alansferreira/nunjucks-filters/commit/c5b14db8f00c1234feb009278b9e1ba66bdc9bdf))
+
 ### [1.0.7](https://github.com/alelltech/nunjucks-filters/compare/v1.0.6...v1.0.7) (2024-10-23)
 
 

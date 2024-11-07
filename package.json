@@ -1,8 +1,8 @@
 {
-  "name": "@alell/nunjucks-filters",
-  "version": "1.0.7",
+  "name": "nunjucks-filters",
+  "version": "1.0.8",
   "author": "Alan S. Ferreira",
-  "description": "Cascade multiple and nested Regex expressions.",
+  "description": "Nunjucks filters Horse Steroids Injection.",
   "license": "MIT",
   "private": false,
   "main": "dist/index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alelltech/nunjucks-filters.git"
+    "url": "https://github.com/alansferreira/nunjucks-filters.git"
   },
   "scripts": {
     "release": "standard-version -a --releaseCommitMessageFormat \"chore(release): {{currentTag}}\" ",
@@ -48,6 +48,6 @@
     "dist"
   ],
   "engines": {
-    "node": ">=12"
+    "node": ">=10"
   }
 }
