@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.9](https://github.com/alansferreira/nunjucks-filters/compare/v1.0.8...v1.0.9) (2024-11-07)
+
+
+### Others
+
+* **release:** 1.0.8 ([db4afa5](https://github.com/alansferreira/nunjucks-filters/commit/db4afa5285eb8e69b38b8c711b09e3836a9a7790))
+
 ### 1.0.8 (2024-11-07)
 
 
