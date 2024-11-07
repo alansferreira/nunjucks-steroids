@@ -29,6 +29,22 @@ console.log(rendered);
 
 ```
 
+
+## Available filters
+
+All [underscore.string](https://www.npmjs.com/package/underscore.string) functions.
+
+### Custom
+```
+{{ 'my name'      | pascalCase }}    // MyName
+{{ 'foo'          | encode64 }}      // Zm9vCg==
+{{ 'Zm9vCg=='     | decode64 }}      // foo
+{{ 'foo'          | encodeHex }}     // 6f660a6f
+{{ '6f660a6f'     | decodeHex }}     // foo
+{{ 36000          | humanMs }}       // 4s
+{{ '4s'           | parseMs }}       // 36000
+```
+
 ## About US
 
 <style>
