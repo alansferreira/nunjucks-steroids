@@ -1,6 +1,6 @@
 {
   "name": "nunjucks-blowup-filters",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "author": "Alan S. Ferreira",
   "description": "Nunjucks filters Horse Steroids Injection.",
   "license": "MIT",
@@ -46,7 +46,8 @@
     "parse-duration": "1.1.0",
     "ms": "2.1.3",
     "nunjucks": "3.2.4",
-    "@types/nunjucks": "3.2.6"
+    "@types/nunjucks": "3.2.6",
+    "dayjs": "1.11.13"
   },
   "files": [
     "dist"
