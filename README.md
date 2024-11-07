@@ -42,6 +42,7 @@ decode64:   Zm9v     => {{ 'Zm9v'         | decode64 }}    // foo
 encodeHex:  foo      => {{ 'foo'          | encodeHex }}   // 666f6f
 decodeHex:  666f6f   => {{ '666f6f'       | decodeHex }}   // foo
 duration:   36000    => {{ 36000          | duration }}    // 36s
+duration:   36000    => {{ 36000          | duration(true) }}    // 36s
 duration:   4s       => {{ '4s'           | duration }}    // 4000
 ```
 

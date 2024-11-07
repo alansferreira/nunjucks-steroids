@@ -2,7 +2,10 @@ import * as _ from 'underscore.string';
 // import prettyms from 'pretty-ms';
 import parseDuration from 'parse-duration';
 import * as ms from 'ms';
+import * as dayjs from 'dayjs';
+import * as customParseFormat from 'dayjs/plugin/customParseFormat';
 
+dayjs.extend(customParseFormat);
 
 const aliasMap: Record<string, (str: string, ...args: any[]) => string> = {
   'pascalCase': _.classify,
@@ -16,8 +19,14 @@ const aliasMap: Record<string, (str: string, ...args: any[]) => string> = {
     if(isNaN(n)) return ms(str, {long}).toString();
   },
   'date': (str, format, ...args: any[])=>{
-
-    return '';
+    let result: dayjs.Dayjs = dayjs();
+    if(typeof result[format] === 'function') {
+      result = dayjs(str)
+      result = result[format](...args);
+    } else {
+      result = dayjs(str, format);
+    }
+    return result.toString();
   }
 }
 
