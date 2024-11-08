@@ -1,0 +1,25 @@
+{
+  "name": "nunjucks-steroids",
+  "version": "1.1.4",
+  "author": "Alan S. Ferreira",
+  "description": "Nunjucks filters Horse Steroids Injection.",
+  "license": "MIT",
+  "private": false,
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alansferreira/nunjucks-steroids.git"
+  },
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=10"
+  }
+}
