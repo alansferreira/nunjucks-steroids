@@ -1,5 +1,4 @@
-# nunjucks-blowup-filters
-
+# Nunjucks Steroids
 
 Blow Up your Nunjuck With a Horse Steroids Injection!
 
@@ -7,12 +6,12 @@ Blow Up your Nunjuck With a Horse Steroids Injection!
 
 
 ```console
-$ npm i -s nunjucks-blowup-filters
+$ npm i -s nunjucks-steroids
 ```
 
 ```ts
 import { Environment } from "nunjucks";
-import { bind } from "nunjucks-blowup-filters";
+import { bind } from "nunjucks-steroids";
 
 export const _env = bind(
   new Environment(null, {
@@ -91,7 +90,7 @@ date: 01/02/2000 => {{ '01/02/2000' | date('DD/MM/YYYY') | date('add', 1, 'd') |
 
 ## Help us
 
-See [CONTRIBUTING.md](https://github.com/alelltech/nunjucks-blowup-filters/blob/main/CONTRIBUTING.md)
+See [CONTRIBUTING.md](https://github.com/alelltech/nunjucks-steroids/blob/main/CONTRIBUTING.md)
 
 *If you like our project help us to make more best solutions.*
 
