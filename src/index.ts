@@ -10,10 +10,9 @@ dayjs.extend(customParseFormat);
 
 const aliasMap: Record<string, (str: string, ...args: any[]) => string> = {
   'pascalCase': _.classify,
-  'encode64': (str) => Buffer.from(str).toString('base64'),
-  'decode64': (str) => Buffer.from(str, 'base64').toString('utf-8'),
-  'encodeHex': (str) => Buffer.from(str).toString('hex'),
-  'decodeHex': (str) => Buffer.from(str, 'hex').toString('utf-8'),
+  'base64': (str, decode) => (decode ? Buffer.from(str, 'base64').toString('utf-8') : Buffer.from(str).toString('base64')),
+  'hex': (str, decode) => (decode ? Buffer.from(str, 'hex').toString('utf-8') : Buffer.from(str).toString('hex')),
+
   'duration': (str, long = false) => {
     const n = Number(str);
     if(!isNaN(n)) return ms(n);
