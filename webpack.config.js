@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const webpack = require("webpack");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -24,7 +25,9 @@ module.exports = {
     umdNamedDefine: false,
   },
   // devtool: "source-map",
-  plugins: [new webpack.BannerPlugin(fs.readFileSync("LICENSE", "utf8"))],
+  plugins: [
+    new webpack.BannerPlugin(fs.readFileSync("LICENSE", "utf8"))
+  ],
 };
 
 // module.exports = {

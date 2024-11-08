@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "./package",
     // "sourceRoot": "./src/",
     "module": "CommonJS",
     "declaration": true,
