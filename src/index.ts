@@ -4,7 +4,7 @@ import parseDuration from 'parse-duration';
 import * as ms from 'ms';
 import * as dayjs from 'dayjs';
 import * as customParseFormat from 'dayjs/plugin/customParseFormat';
-import { randomUUID } from 'crypto';
+import { v4 } from 'uuid';
 
 dayjs.extend(customParseFormat);
 
@@ -40,7 +40,7 @@ function UuidExtension() {
       return new nodes.CallExtension(this, 'run', args, []);
   };
 
-  this.run = randomUUID;
+  this.run = v4;
 }
 
 export default function bind(env: {getFilter: (name: string) => Function, addExtension(name: string, ext: any): any, }){
