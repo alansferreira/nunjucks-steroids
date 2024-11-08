@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.9](https://github.com/alansferreira/nunjucks-steroids/compare/v1.1.8...v1.1.9) (2024-11-08)
+
+
+### Others
+
+* **release:** 1.1.8 ([2d876bc](https://github.com/alansferreira/nunjucks-steroids/commit/2d876bc4d4f91ad5c30685cbcdb7caadd6fa3eaf))
+
 ### [1.1.8](https://github.com/alansferreira/nunjucks-steroids/compare/v1.1.7...v1.1.8) (2024-11-08)
 
 
