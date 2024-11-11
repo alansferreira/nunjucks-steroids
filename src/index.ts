@@ -3,6 +3,7 @@ import * as _ from 'underscore.string';
 import parseDuration from 'parse-duration';
 import * as ms from 'ms';
 import * as dayjs from 'dayjs';
+import { faker } from '@faker-js/faker';
 import * as customParseFormat from 'dayjs/plugin/customParseFormat';
 import { v4 } from 'uuid';
 
@@ -42,8 +43,14 @@ function UuidExtension() {
   this.run = v4;
 }
 
-export default function bind(env: {getFilter: (name: string) => Function, addExtension(name: string, ext: any): any, }){
+export default function bind(env: {
+  getFilter: (name: string) => Function,
+  addExtension(name: string, ext: any): any,
+  addGlobal(name: string, ext: any): any,
+}){
   const _getFilter = env.getFilter;
+  env.addGlobal('faker', faker);
+faker.string.uuid()
   env.getFilter = function (name: string) {
 
     // if exists function on 'underscore' bypass to 'underscore'

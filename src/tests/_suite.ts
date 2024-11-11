@@ -5,6 +5,7 @@ import * as _ from 'underscore.string';
 import * as assert from 'assert';
 import { Environment } from 'nunjucks';
 import { randomUUID } from 'crypto';
+import { faker } from '@faker-js/faker';
 
 describe("Default Suite", () => {
   after(() => {
@@ -31,8 +32,13 @@ describe("Default Suite", () => {
       `# encode 'foo' to hex > decode '666f6f' > to 'foo' again`,
       `# foo > 666f6f > foo`,
       `hex: foo => {{ 'foo' | hex | hex(true) }} // foo`,
-      ``,
+
+      `# @deprecated @see faker.string.uuid()`,
       `uuid: {% uuid %}`,
+      ``,
+      `# see https://v9.fakerjs.dev/api/lorem.html`,
+      `faker person: {{ faker.person.firstName() }}`,
+      `faker uuid: {{ faker.string.uuid() }}`,
       ``,
       `# see https://github.com/vercel/ms?tab=readme-ov-file#examples`,
       `duration: 36000 => {{ 36000 | duration }} // 36s`,
