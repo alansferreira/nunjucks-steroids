@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/alansferreira/nunjucks-steroids/compare/v1.1.10...v1.2.0) (2024-11-11)
+
+
+### Features
+
+* implements faker ([2024c18](https://github.com/alansferreira/nunjucks-steroids/commit/2024c18d16b0e966b830592e531808389fb100cf))
+
+
+### Others
+
+* **release:** 1.1.10 ([9381dae](https://github.com/alansferreira/nunjucks-steroids/commit/9381daebe3189cac8908b0cf0692f01e5df1f506))
+
 ### [1.1.10](https://github.com/alansferreira/nunjucks-steroids/compare/v1.1.9...v1.1.10) (2024-11-08)
 
 
