@@ -32,7 +32,7 @@ describe("Default Suite", () => {
       `# encode 'foo' to hex > decode '666f6f' > to 'foo' again`,
       `# foo > 666f6f > foo`,
       `hex: foo => {{ 'foo' | hex | hex(true) }} // foo`,
-
+      ``,
       `# @deprecated @see faker.string.uuid()`,
       `uuid: {% uuid %}`,
       ``,

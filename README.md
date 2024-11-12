@@ -1,6 +1,6 @@
 # Nunjucks Steroids
 
-Blow Up your Nunjuck With a Horse Steroids Injection!
+Blow Up your Nunjuck muscles with Horse Steroids Injection!
 
 <img src="assets/horse.jpg" alt="Horse Power" style="width: 150px; height: 150px;"/>
 
@@ -35,6 +35,7 @@ console.log(rendered);
 * Duration conversions with [vercel/ms](https://github.com/vercel/ms?tab=readme-ov-file#examples).
 * Date utilities with modern [dayjs](https://day.js.org/docs/en/manipulate/manipulate)
 * Encode and Decoders base64, hex...
+* Faker all with [fakerjs](https://v9.fakerjs.dev/api/lorem.html)
 
 ### Examples
 
